@@ -1,0 +1,116 @@
+Exercicios aula 26/10
+PDF anexado no dia da aula
+
+
+EXERCICIO 1
+
+A) 
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity exercicio_1a is
+    port (
+        A, B, C, D : in bit;
+        W : out bit
+    );
+end exercicio_1a;
+
+architecture arquitetura of exercicio_1a is
+begin
+
+    W <= (A or B) and (C or D);
+
+end arquitetura;
+
+-------------------------------------------------------------------------------------------
+
+B)
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity exercicio_1b is
+    port (
+        A, B, C : in bit;
+        X : out bit
+    );
+end exercicio_1b;
+
+architecture arquitetura of exercicio_1b is
+begin
+
+    X <= (A and B) or (B and C);
+
+end arquitetura;
+
+-------------------------------------------------------------------------------------------
+
+C)
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity exercicio_1c is
+    port (
+        A, B, C : in bit;
+        Y : out bit
+    );
+end exercicio_1c;
+
+architecture arquitetura of exercicio_1c is
+begin
+
+    Y <= ((A and B) or B) and C;
+
+end arquitetura;
+
+-------------------------------------------------------------------------------------------
+
+D)
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity exercicio_1d is
+    port (
+        A, B, C, D : in bit;
+        Z : out bit
+    );
+end exercicio_1d;
+
+architecture arquitetura of exercicio_1d is
+begin
+
+    Z <= ((A and B) or B or (B or C)) and D;
+
+end arquitetura;
+
+-------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+
+**EXERCICIO 2**
+
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity somador_completo is
+    port (
+        A, B, Te : in bit;
+        S, Ts : out bit
+    );
+end somador_completo;
+
+architecture arquitetura of somador_completo is
+begin
+
+    S <= A xor B xor Te;
+
+    Ts <= (A and B) or (A and Te) or (B and Te);
+
+end arquitetura;
+
+-------------------------------------------------------------------------------------------
